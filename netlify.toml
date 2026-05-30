@@ -4,7 +4,9 @@
 
 [build.environment]
   NODE_VERSION = "22"
-  NODE_ENV = "production"
+  # NOTE: do NOT set NODE_ENV=production here — it makes `npm install` skip
+  # devDependencies (tailwindcss, typescript, postcss …) which the Next.js
+  # build needs. `next build` runs in production mode on its own anyway.
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
