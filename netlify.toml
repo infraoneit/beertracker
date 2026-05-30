@@ -1,0 +1,19 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NODE_ENV = "production"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[functions]
+  node_bundler = "esbuild"
+  # Only include Next.js server artifacts, NOT node_modules (Netlify installs those automatically)
+  included_files = [
+    ".next/server/**",
+    ".next/required-server-files.json",
+    "package.json"
+  ]

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Definitions</title>
+</head>
+<body>
+    <!-- Static form definition so Netlify's build-time bot detects the fields.
+         The live React form (components/sections/BetaForm.tsx) POSTs here. -->
+    <form name="beta-anmeldung" netlify netlify-honeypot="bot-field" hidden>
+        <input type="hidden" name="form-name" value="beta-anmeldung" />
+        <input name="bot-field" />
+        <input name="name" />
+        <input name="email" />
+        <input name="organisation" />
+        <select name="event-typ">
+            <option>Festival</option>
+            <option>Zeltfest</option>
+            <option>Bar / Club</option>
+            <option>Brauerei</option>
+            <option>Verein / Schützenfest</option>
+            <option>Privat / WG-Party</option>
+            <option>Andere</option>
+        </select>
+        <textarea name="message"></textarea>
+    </form>
+</body>
+</html>

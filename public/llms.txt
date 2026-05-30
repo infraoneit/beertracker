@@ -1,0 +1,32 @@
+# Biertracker
+
+> Biertracker ist eine Software für Echtzeit-Getränke-Tracking auf Festivals, in Bars und bei privaten Gruppenkämpfen. Gäste tracken ihre Biere per iOS- und Android-App; ein Live-Leaderboard zeigt auf dem Big Screen (Beamer/Festival-Leinwand) in Echtzeit, welche Gruppe führt. Das System ist hardware-agnostisch und läuft stabil schon auf einem einzigen Raspberry Pi.
+
+Biertracker richtet sich an Veranstalter von Festivals, Zeltfesten, Bars, Clubs, Brauereien sowie Vereins- und Schützenfesten. Kern-Nutzen: Gamification des Ausschanks, höherer Umsatz und Live-Wettkampf zwischen Gruppen – von der App direkt auf die Leinwand.
+
+Wichtige Fakten:
+
+- Plattformen: native Apps für iOS und Android, Web-Anzeige für den Big Screen
+- Hardware: läuft auf minimaler Hardware, ein Raspberry Pi genügt; self-hostbar und offline-fähig
+- Preis: aktuell kostenlose Beta
+- Sprache: Deutsch (Schweiz)
+- Kontakt: hello@beertracker.ch
+
+## Hauptseiten
+
+- [Startseite](https://beertracker.ch/): Produktübersicht, Features, Live-Leaderboard, Ablauf und Beta-Anmeldung
+- [Über uns](https://beertracker.ch/ueber-uns): Team und Mission hinter Biertracker
+- [Datenschutz](https://beertracker.ch/datenschutz): Datenschutzerklärung nach Schweizer Recht (revDSG)
+- [Impressum](https://beertracker.ch/impressum): Anbieterkennzeichnung
+
+## Kernfunktionen
+
+- Live Leaderboard: Echtzeit-Anzeige auf Beamer und Festival-Screens ("Big Screen Energy")
+- Cross-Platform: native iOS- und Android-App mit nativer Performance für jede Gruppe
+- Hardware Agnostic: komplettes Festival-Tracking auf einem Raspberry Pi, Zero-Config, self-hosted
+- Analytics: Umsatz-Boost durch Gamification – Zahlen, die Wirte lieben
+
+## Kontakt
+
+- E-Mail: hello@beertracker.ch
+- Beta-Zugang: https://beertracker.ch/#beta

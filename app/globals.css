@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "cv11", "ss01";
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-gold text-obsidian;
+  }
+
+  /* Slim, on-brand scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0a0c;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e1e25;
+    border-radius: 9999px;
+    border: 2px solid #0a0a0c;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2a2a33;
+  }
+}
+
+@layer components {
+  /* Glassmorphism surface for navbar & floating elements */
+  .glass {
+    @apply border border-white/10 bg-white/[0.04] backdrop-blur-xl backdrop-saturate-150;
+  }
+
+  /* Gold gradient text — the brand headline treatment */
+  .text-gradient-gold {
+    @apply bg-gradient-to-br from-gold-400 via-gold to-gold-600 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-cyan {
+    @apply bg-gradient-to-br from-cyan-400 via-cyan to-cyan-600 bg-clip-text text-transparent;
+  }
+
+  /* Subtle gradient for large faded UI labels */
+  .text-gradient-light {
+    @apply bg-gradient-to-b from-foreground to-foreground/40 bg-clip-text text-transparent;
+  }
+
+  /* Hairline gradient border used on cards/pills */
+  .ring-hairline {
+    @apply ring-1 ring-inset ring-white/10;
+  }
+
+  /* Readable long-form text for legal / about subpages */
+  .longform {
+    @apply max-w-3xl text-[0.975rem] leading-relaxed text-muted;
+  }
+  .longform h2 {
+    @apply mb-3 mt-12 font-display text-2xl font-bold tracking-tight text-foreground;
+  }
+  .longform h3 {
+    @apply mb-2 mt-6 text-lg font-semibold text-foreground;
+  }
+  .longform p {
+    @apply mb-4;
+  }
+  .longform ul {
+    @apply mb-4 ml-5 list-disc space-y-1.5 marker:text-gold/60;
+  }
+  .longform a {
+    @apply text-gold underline-offset-2 transition-colors hover:underline;
+  }
+  .longform strong {
+    @apply font-semibold text-foreground;
+  }
+  .longform :where(h2, h3):first-child {
+    @apply mt-0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Fades the edges of horizontal marquees */
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+  }
+
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent);
+    mask-image: linear-gradient(to bottom, black 60%, transparent);
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  /* Pauses CSS marquee on hover (applied to the track) */
+  .pause-on-hover:hover {
+    animation-play-state: paused;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
