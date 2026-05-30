@@ -41,7 +41,7 @@ export function Eyebrow({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] backdrop-blur-sm",
+        "inline-flex w-fit items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] backdrop-blur-sm",
         tone === "gold" ? "text-gold" : "text-cyan",
         className
       )}
